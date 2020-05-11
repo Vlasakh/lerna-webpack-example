@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
@@ -26,6 +27,8 @@ module.exports = {
     // openPage: '/',
   },
   plugins: [
+    new CleanWebpackPlugin(),
+
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: 'index.html',

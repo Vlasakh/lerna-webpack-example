@@ -25,6 +25,7 @@
     "gh-pages": "^1.1.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "jest": "^24.0.0",
     "lerna": "^3.11.0",
     "source-map-loader": "^0.2.3",
@@ -38,7 +39,7 @@
     "webpack-dev-server": "^3.0.0"
   },
   "scripts": {
-    "prebuild": "git clean -fdx packages -e packages/*/node_modules",
+    "prebuild-deleted-too-much": "git clean -fdx packages -e packages/*/dist",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --cache --ignore-path .gitignore ./packages/*/src/**.jsx",
     "lint:ts": "yarn tslint -c tslint.json-no -p tsconfig-lint.json-no --fix",
