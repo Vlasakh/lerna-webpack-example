@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -19,8 +20,10 @@ module.exports = {
     noInfo: true,
     port: 3000,
     open: true,
+    hotOnly: true,
+    historyApiFallback: true,
     publicPath: '/',
-    // openPage: 'lerna-webpack-example',
+    // openPage: '/',
   },
   plugins: [
     new HtmlWebPackPlugin({
@@ -31,6 +34,7 @@ module.exports = {
       template: './src/index.html',
       filename: 'async/index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     rules: [

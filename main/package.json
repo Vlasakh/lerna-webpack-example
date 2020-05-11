@@ -49,6 +49,7 @@
     "test": "jest",
     "build": "yarn tsc -b && lerna run build:webpack",
     "dev": "lerna run dev --stream",
-    "deploy": "gh-pages -d packages/router/dist"
+    "deploy": "gh-pages -d packages/router/dist",
+    "serve": "serve -s packages/router/dist -l 3001"
   }
 }

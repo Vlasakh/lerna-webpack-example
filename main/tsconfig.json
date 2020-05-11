@@ -5,7 +5,7 @@
             "path": "packages/router"
         },
         {
-            "path": "packages/leaf"
+            "path": "./packages/leaf"
         },
     ]
 }

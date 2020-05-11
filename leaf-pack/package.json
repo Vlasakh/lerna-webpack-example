@@ -1,12 +1,9 @@
 {
-  "name": "@dkez/async-leaf",
+  "name": "leaf-pack",
   "version": "0.0.2",
   "main": "src/index.jsx",
   "license": "MIT",
-  "private": true,
-  "publishConfig": {
-    "access": "public"
-  },
+  "repository": "https://github.com/Vlasakh/lerna-webpack-example.git",
   "dependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"

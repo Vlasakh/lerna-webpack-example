@@ -6,6 +6,5 @@
       "baseUrl": "src",
       "module": "esnext"
     },
-    "include": ["./src/"],
+    "include": ["./src/"]
   }
-  

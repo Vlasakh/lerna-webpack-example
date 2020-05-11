@@ -1,17 +1,13 @@
 {
-  "name": "@dkez/leaf",
+  "name": "leaf",
   "version": "0.0.2",
-  "main": "src/index.tsx",
+  "main": "src/index.jsx",
   "license": "MIT",
-  "private": true,
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
-    "leaf-local": "npm:file:../../../leaf/"
+    "leaf-local": "file:../../../leaf-pack/"
   }
 }

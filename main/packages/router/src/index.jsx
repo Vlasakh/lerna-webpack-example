@@ -1,4 +1,4 @@
-import Leaf from '../../leaf/src/index';
+import Leaf from 'leaf/src';
 import React, { Suspense } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -20,19 +20,20 @@ const routePrefix = '/';
 /* tslint:enable */
 
 const LoadingState = <div style={{ background: 'aqua', width: '100px', height: '100px' }}>Loading...</div>;
+// const Leaf = () => <div style={{ background: 'aqua', width: '100px', height: '100px' }}>Hello</div>;
 
 const BasicRouting = () => (
   <Suspense fallback={LoadingState}>
-    <Router>
+    <Router basename="/#">
       <div>
         {/*<a href={`${routePrefix}async`}>Hard redirect to /async</a>*/}
         <br />
-        <a href={`${routePrefix}`}>Hard redirect to /</a>
+        <a href={`${routePrefix}sync-direct`}>Hard redirect to 6</a>
         <br />
         <br />
 
         {/* We can still use external routing (e.g. page redirects) to load our components. */}
-        <Route exact={true} path={routePrefix} component={Leaf} />
+        <Route exact={true} path={`${routePrefix}sync-direct`} component={Leaf} />
         {/*<Route path={`${routePrefix}async`} component={LoadableAsyncLeaf} />*/}
       </div>
     </Router>
