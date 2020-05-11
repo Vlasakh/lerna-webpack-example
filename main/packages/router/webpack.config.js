@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    main: './src/index.tsx',
+    main: './src/index.jsx',
   },
   output: {
     filename: '[name].js',
@@ -13,7 +13,7 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.js', '.json'],
     symlinks: true,
   },
   devServer: {
@@ -39,7 +39,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?)|(jsx?)$/,
+        test: /\.(js?)|(jsx?)$/,
         exclude: /node_modules/,
         use: {
           loader: require.resolve('babel-loader'),

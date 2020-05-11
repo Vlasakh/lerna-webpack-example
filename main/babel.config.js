@@ -18,13 +18,10 @@ module.exports = function babelConfig(api) {
           },
         },
       ],
-      '@babel/typescript',
+      // '@babel/typescript',
       '@babel/react',
     ],
-    plugins: [
-      '@babel/syntax-dynamic-import',
-      '@babel/plugin-proposal-object-rest-spread',
-    ],
+    plugins: ['@babel/syntax-dynamic-import', '@babel/plugin-proposal-object-rest-spread'],
     env: {
       test: {
         presets: [
@@ -37,7 +34,7 @@ module.exports = function babelConfig(api) {
               },
             },
           ],
-          '@babel/typescript',
+          // '@babel/typescript',
           '@babel/react',
         ],
       },

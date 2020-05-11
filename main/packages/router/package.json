@@ -3,7 +3,6 @@
   "version": "0.0.3",
   "main": "src/index.jsx",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",

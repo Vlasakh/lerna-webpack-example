@@ -45,9 +45,10 @@
     "prebuild": "git clean -fdx packages -e packages/*/node_modules",
     "bootstrap": "lerna bootstrap",
     "lint": "eslint --cache --ignore-path .gitignore ./packages/*/src/**.jsx",
-    "lint:ts": "yarn tslint -c tslint.json -p tsconfig-lint.json --fix",
+    "lint:ts": "yarn tslint -c tslint.json-no -p tsconfig-lint.json-no --fix",
     "test": "jest",
-    "build": "yarn tsc -b && lerna run build:webpack",
+    "build-w-ts": "yarn tsc -b && lerna run build:webpack",
+    "build": "lerna run build:webpack",
     "dev": "lerna run dev --stream",
     "deploy": "gh-pages -d packages/router/dist",
     "serve": "serve -s packages/router/dist -l 3001"
