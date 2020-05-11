@@ -6,7 +6,8 @@
   "dependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "leaf-app": "^0.0.2"
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development --color",

@@ -1,11 +1,11 @@
 const fs = require('fs');
-const screenState = fs.realpathSync('../../node_modules/leaf-local/src');
+const screenState = fs.realpathSync('./node_modules/leaf-local/src');
 fs.writeFileSync('temp.json', JSON.stringify(screenState));
 
 module.exports = function babelConfig(api) {
   api.cache.forever();
   return {
-    // include: [fs.realpathSync('../../node_modules/leaf-local/src')],
+    include: [fs.realpathSync('./node_modules/leaf-local/src')],
     presets: [
       [
         '@babel/env',
