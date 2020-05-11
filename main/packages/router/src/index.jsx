@@ -1,4 +1,4 @@
-import Leaf from 'leaf/src';
+import Leaf from 'leaf-app';
 import React, { Suspense } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -28,7 +28,7 @@ const BasicRouting = () => (
       <div>
         {/*<a href={`${routePrefix}async`}>Hard redirect to /async</a>*/}
         <br />
-        <a href={`${routePrefix}sync-direct`}>Hard redirect to 6</a>
+        <a href={`${routePrefix}sync-direct`}>Hard redirect to 7</a>
         <br />
         <br />
 

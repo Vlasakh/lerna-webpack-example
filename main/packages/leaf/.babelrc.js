@@ -1,16 +1,11 @@
 const fs = require('fs');
 const screenState = fs.realpathSync('../../node_modules/leaf-local/src');
-fs.writeFileSync('temp-main.json', JSON.stringify(screenState));
+fs.writeFileSync('temp.json', JSON.stringify(screenState));
 
 module.exports = function babelConfig(api) {
   api.cache.forever();
   return {
-    babelrcRoots: [
-      // Keep the root as a root
-      '.',
-      // Also consider monorepo packages "root" and load their .babelrc files.
-      './packages/*',
-    ],
+    // include: [fs.realpathSync('../../node_modules/leaf-local/src')],
     presets: [
       [
         '@babel/env',

@@ -49,6 +49,16 @@ module.exports = {
         },
       },
       {
+        test: /\.(js?)|(jsx?)$/,
+        include: /leaf-local\/src/,
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            rootMode: 'upward',
+          },
+        },
+      },
+      {
         test: /\.html$/,
         use: [
           {
